@@ -1,5 +1,7 @@
 # Live site URL
 
+https://nft-preview-card-component-liard-five.vercel.app/
+
 # Frontend Mentor - NFT preview card component
 
 ![Design preview for the NFT preview card component coding challenge](public/images/preview.jpg)
