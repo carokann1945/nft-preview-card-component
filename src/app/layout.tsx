@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
+import { Outfit } from 'next/font/google';
 import './globals.css';
 
-const pretendard = localFont({
-  src: '../../public/fonts/PretendardVariable.woff2', // 폰트 파일 경로 설정
-  variable: '--font-pretendard', // css 변수명을 정의하여 Tailwind CSS 등에서 사용할 수 있음
+const outfit = Outfit({
+  subsets: ['latin'], // 영문/숫자 서브셋 최적화 (한글 폰트의 경우 일반적으로 latin 포함)
+  display: 'swap',
+  variable: '--font-outfit', //tailwind와 연동할 css 변수명 지정
 });
 
 export const metadata: Metadata = {
@@ -18,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" className={pretendard.variable}>
-      <body className="antialiased">{children}</body>
+    <html lang="ko" className={outfit.variable}>
+      <body className="antialiased w-dvw h-dvh bg-blue-950 flex justify-center items-center">{children}</body>
     </html>
   );
 }
